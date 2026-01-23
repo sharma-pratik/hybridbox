@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react'
 
 const FounderSection = () => {
   const [isVisible, setIsVisible] = useState(false)
-  const [activeCard, setActiveCard] = useState(0)
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -20,26 +19,11 @@ const FounderSection = () => {
     }
   }, [])
 
-  const credentials = [
-    { icon: '📚', text: 'NESTA Certified' },
-    { icon: '📚', text: 'ISSA Certified' },
-    { icon: '📚', text: 'IHFA Certified' }
-  ]
-
   const specialties = [
     { icon: '💪', text: 'Calisthenics' },
     { icon: '🏃', text: 'Movement' },
     { icon: '⚡', text: 'Performance Coach' }
   ]
-
-  useEffect(() => {
-    if (isVisible) {
-      const interval = setInterval(() => {
-        setActiveCard((prev) => (prev + 1) % 2)
-      }, 3000)
-      return () => clearInterval(interval)
-    }
-  }, [isVisible])
 
   return (
     <section id="founder" className="manga-section founder-section">

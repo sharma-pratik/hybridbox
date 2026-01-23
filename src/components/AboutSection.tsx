@@ -1,23 +1,4 @@
-import { useState, useEffect } from 'react'
-
 const AboutSection = () => {
-  const [isVisible, setIsVisible] = useState(false)
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        if (entries[0].isIntersecting) {
-          setIsVisible(true)
-        }
-      },
-      { threshold: 0.2 }
-    )
-    const element = document.getElementById('about')
-    if (element) observer.observe(element)
-    return () => {
-      if (element) observer.unobserve(element)
-    }
-  }, [])
 
   return (
     <section id="about" className="manga-section about-section">

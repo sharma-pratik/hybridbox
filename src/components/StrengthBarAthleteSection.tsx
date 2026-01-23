@@ -1,23 +1,4 @@
-import { useState, useEffect } from 'react'
-
 const StrengthBarAthleteSection = () => {
-  const [isVisible, setIsVisible] = useState(false)
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        if (entries[0].isIntersecting) {
-          setIsVisible(true)
-        }
-      },
-      { threshold: 0.2 }
-    )
-    const element = document.getElementById('sba')
-    if (element) observer.observe(element)
-    return () => {
-      if (element) observer.unobserve(element)
-    }
-  }, [])
 
   return (
     <section id="sba" className="manga-section sba-section">
