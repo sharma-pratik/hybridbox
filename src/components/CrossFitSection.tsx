@@ -22,28 +22,28 @@ const CrossFitSection = () => {
 
   const phases = [
     {
-      name: 'DEADLIFT',
-      description: 'Build raw power with the king of strength exercises',
-      features: ['Maximum Strength', 'Posterior Chain', 'Full Body Power', 'Functional Movement'],
-      animation: 'deadlift'
+      name: 'THE SNATCH',
+      description: 'Olympic lift for explosive power and full-body coordination',
+      features: ['Explosive Power', 'Full Body Coordination', 'Hip Drive', 'Olympic Movement'],
+      animation: 'theSnatch'
     },
     {
-      name: 'BURPEE',
-      description: 'High-intensity full-body conditioning movement',
-      features: ['Cardio Endurance', 'Full Body Burn', 'Explosive Power', 'Fat Loss'],
-      animation: 'burpee'
+      name: 'THE CLEAN',
+      description: 'Master the clean - powerful Olympic lift for strength and speed',
+      features: ['Maximum Power', 'Hip Extension', 'Full Body Strength', 'Olympic Technique'],
+      animation: 'theClean'
     },
     {
-      name: 'THRUSTER',
-      description: 'Combine squat and press for ultimate power output',
-      features: ['Total Body Strength', 'Cardio Conditioning', 'Power Development', 'Efficiency'],
-      animation: 'thruster'
+      name: 'WALL BALL',
+      description: 'High-intensity functional movement combining squat and overhead press',
+      features: ['Cardio Conditioning', 'Leg Power', 'Shoulder Endurance', 'Full Body Burn'],
+      animation: 'wallBall'
     },
     {
-      name: 'BOX JUMP',
-      description: 'Explosive plyometric movement for athletic power',
-      features: ['Explosive Power', 'Vertical Jump', 'Leg Strength', 'Athleticism'],
-      animation: 'boxjump'
+      name: 'BACK SQUAT',
+      description: 'Build leg strength and power with the king of lower body exercises',
+      features: ['Leg Strength', 'Core Stability', 'Posterior Chain', 'Maximum Strength'],
+      animation: 'backSquat'
     }
   ]
 
@@ -74,89 +74,41 @@ const CrossFitSection = () => {
           <div className="manga-animation-panel">
             <div className="comic-frame">
               <div className={`stick-figure-animation ${phases[activePhase].animation} ${isVisible ? 'animate' : ''}`}>
-                {phases[activePhase].animation === 'deadlift' && (
-                  <svg viewBox="0 0 200 300" className="figure-svg">
-                    {/* Barbell */}
-                    <line x1="30" y1="150" x2="170" y2="150" stroke="#000" strokeWidth="8" strokeLinecap="round"/>
-                    <rect x="20" y="140" width="20" height="20" rx="3" fill="#000"/>
-                    <rect x="160" y="140" width="20" height="20" rx="3" fill="#000"/>
-                    {/* Person doing deadlift */}
-                    <circle cx="100" cy="100" r="12" fill="#000"/>
-                    <line x1="100" y1="112" x2="85" y2="130" stroke="#000" strokeWidth="6" strokeLinecap="round"/>
-                    <line x1="100" y1="112" x2="115" y2="130" stroke="#000" strokeWidth="6" strokeLinecap="round"/>
-                    <path d="M 100 112 Q 95 160 100 180 Q 105 160 100 112" stroke="#000" strokeWidth="7" fill="none"/>
-                    <line x1="100" y1="180" x2="100" y2="240" stroke="#000" strokeWidth="6" strokeLinecap="round"/>
-                    <line x1="100" y1="240" x2="80" y2="280" stroke="#000" strokeWidth="6" strokeLinecap="round"/>
-                    <line x1="100" y1="240" x2="120" y2="280" stroke="#000" strokeWidth="6" strokeLinecap="round"/>
-                    <line x1="85" y1="130" x2="70" y2="150" stroke="#000" strokeWidth="6" strokeLinecap="round"/>
-                    <line x1="115" y1="130" x2="130" y2="150" stroke="#000" strokeWidth="6" strokeLinecap="round"/>
-                    <circle cx="70" cy="150" r="5" fill="#000"/>
-                    <circle cx="130" cy="150" r="5" fill="#000"/>
-                    <circle cx="80" cy="280" r="4" fill="#000"/>
-                    <circle cx="120" cy="280" r="4" fill="#000"/>
-                  </svg>
+                {phases[activePhase].animation === 'theSnatch' && (
+                  <div className="figure-image-container">
+                    <img 
+                      src="/the-snatch.jpg" 
+                      alt="The Snatch exercise" 
+                      className="figure-image"
+                    />
+                  </div>
                 )}
-                {phases[activePhase].animation === 'burpee' && (
-                  <svg viewBox="0 0 200 300" className="figure-svg">
-                    {/* Person in burpee position */}
-                    <circle cx="100" cy="80" r="12" fill="#000"/>
-                    <line x1="100" y1="92" x2="75" y2="120" stroke="#000" strokeWidth="6" strokeLinecap="round"/>
-                    <line x1="100" y1="92" x2="125" y2="120" stroke="#000" strokeWidth="6" strokeLinecap="round"/>
-                    <path d="M 100 92 Q 95 150 100 180 Q 105 150 100 92" stroke="#000" strokeWidth="7" fill="none"/>
-                    <line x1="100" y1="180" x2="100" y2="220" stroke="#000" strokeWidth="6" strokeLinecap="round"/>
-                    <line x1="100" y1="220" x2="75" y2="260" stroke="#000" strokeWidth="6" strokeLinecap="round"/>
-                    <line x1="100" y1="220" x2="125" y2="260" stroke="#000" strokeWidth="6" strokeLinecap="round"/>
-                    <line x1="75" y1="120" x2="60" y2="200" stroke="#000" strokeWidth="6" strokeLinecap="round"/>
-                    <line x1="125" y1="120" x2="140" y2="200" stroke="#000" strokeWidth="6" strokeLinecap="round"/>
-                    <circle cx="60" cy="200" r="5" fill="#000"/>
-                    <circle cx="140" cy="200" r="5" fill="#000"/>
-                    <circle cx="75" cy="260" r="4" fill="#000"/>
-                    <circle cx="125" cy="260" r="4" fill="#000"/>
-                    {/* Ground line */}
-                    <line x1="50" y1="280" x2="150" y2="280" stroke="#000" strokeWidth="3" strokeLinecap="round"/>
-                  </svg>
+                {phases[activePhase].animation === 'theClean' && (
+                  <div className="figure-image-container">
+                    <img 
+                      src="/the-clean.jpg" 
+                      alt="The Clean exercise" 
+                      className="figure-image"
+                    />
+                  </div>
                 )}
-                {phases[activePhase].animation === 'thruster' && (
-                  <svg viewBox="0 0 200 300" className="figure-svg">
-                    {/* Barbell overhead */}
-                    <line x1="50" y1="60" x2="150" y2="60" stroke="#000" strokeWidth="8" strokeLinecap="round"/>
-                    <rect x="40" y="50" width="20" height="20" rx="3" fill="#000"/>
-                    <rect x="140" y="50" width="20" height="20" rx="3" fill="#000"/>
-                    {/* Person doing thruster */}
-                    <circle cx="100" cy="120" r="12" fill="#000"/>
-                    <line x1="100" y1="132" x2="85" y2="150" stroke="#000" strokeWidth="6" strokeLinecap="round"/>
-                    <line x1="100" y1="132" x2="115" y2="150" stroke="#000" strokeWidth="6" strokeLinecap="round"/>
-                    <path d="M 100 132 Q 95 180 100 200 Q 105 180 100 132" stroke="#000" strokeWidth="7" fill="none"/>
-                    <line x1="100" y1="200" x2="100" y2="260" stroke="#000" strokeWidth="6" strokeLinecap="round"/>
-                    <line x1="100" y1="260" x2="80" y2="280" stroke="#000" strokeWidth="6" strokeLinecap="round"/>
-                    <line x1="100" y1="260" x2="120" y2="280" stroke="#000" strokeWidth="6" strokeLinecap="round"/>
-                    <line x1="85" y1="150" x2="70" y2="70" stroke="#000" strokeWidth="6" strokeLinecap="round"/>
-                    <line x1="115" y1="150" x2="130" y2="70" stroke="#000" strokeWidth="6" strokeLinecap="round"/>
-                    <circle cx="70" cy="70" r="5" fill="#000"/>
-                    <circle cx="130" cy="70" r="5" fill="#000"/>
-                    <circle cx="80" cy="280" r="4" fill="#000"/>
-                    <circle cx="120" cy="280" r="4" fill="#000"/>
-                  </svg>
+                {phases[activePhase].animation === 'wallBall' && (
+                  <div className="figure-image-container">
+                    <img 
+                      src="/wall-ball.jpg" 
+                      alt="Wall Ball exercise" 
+                      className="figure-image"
+                    />
+                  </div>
                 )}
-                {phases[activePhase].animation === 'boxjump' && (
-                  <svg viewBox="0 0 200 300" className="figure-svg">
-                    {/* Box */}
-                    <rect x="60" y="200" width="80" height="30" fill="#000" opacity="0.3" stroke="#000" strokeWidth="3"/>
-                    {/* Person jumping onto box */}
-                    <circle cx="100" cy="120" r="12" fill="#000"/>
-                    <line x1="100" y1="132" x2="85" y2="150" stroke="#000" strokeWidth="6" strokeLinecap="round"/>
-                    <line x1="100" y1="132" x2="115" y2="150" stroke="#000" strokeWidth="6" strokeLinecap="round"/>
-                    <path d="M 100 132 Q 95 180 100 200 Q 105 180 100 132" stroke="#000" strokeWidth="7" fill="none"/>
-                    <line x1="100" y1="200" x2="100" y2="250" stroke="#000" strokeWidth="6" strokeLinecap="round"/>
-                    <line x1="100" y1="250" x2="80" y2="280" stroke="#000" strokeWidth="6" strokeLinecap="round"/>
-                    <line x1="100" y1="250" x2="120" y2="280" stroke="#000" strokeWidth="6" strokeLinecap="round"/>
-                    <line x1="85" y1="150" x2="70" y2="140" stroke="#000" strokeWidth="6" strokeLinecap="round"/>
-                    <line x1="115" y1="150" x2="130" y2="140" stroke="#000" strokeWidth="6" strokeLinecap="round"/>
-                    <circle cx="70" cy="140" r="5" fill="#000"/>
-                    <circle cx="130" cy="140" r="5" fill="#000"/>
-                    <circle cx="80" cy="280" r="4" fill="#000"/>
-                    <circle cx="120" cy="280" r="4" fill="#000"/>
-                  </svg>
+                {phases[activePhase].animation === 'backSquat' && (
+                  <div className="figure-image-container">
+                    <img 
+                      src="/back-squat.jpg" 
+                      alt="Back Squat exercise" 
+                      className="figure-image"
+                    />
+                  </div>
                 )}
               </div>
               <div className="motion-lines"></div>

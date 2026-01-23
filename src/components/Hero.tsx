@@ -16,9 +16,9 @@ const Hero = () => {
       <div className={`manga-content ${isVisible ? 'visible' : ''}`}>
         <div className="manga-title-container">
           <h1 className="manga-title">
-            <span className="title-main">HYBRIDBOX</span>
+          <span className="title-main">HYBRIDBOX</span>
             <span className="title-impact">⚡</span>
-          </h1>
+        </h1>
           <div className="manga-subtitle">
             <span className="subtitle-text">POWER UP YOUR BODY!</span>
             <div className="subtitle-lines"></div>
@@ -28,7 +28,7 @@ const Hero = () => {
           <span className="manga-tag">💪 CALISTHENICS</span>
           <span className="manga-tag">🐾 ANIMAL FLOW</span>
           <span className="manga-tag">🔥 CROSSFIT</span>
-        </div>
+      </div>
         <div className="scroll-indicator-manga">
           <div className="manga-arrow">↓</div>
         </div>
