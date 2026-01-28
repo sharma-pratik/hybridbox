@@ -34,10 +34,10 @@ const CalisthenicsSection = () => {
       animation: 'planche'
     },
     {
-      name: 'ONE-ARM FRONT LEVER',
-      description: 'Elite level core and back strength - single arm horizontal hold',
-      features: ['Elite Core Strength', 'Unilateral Power', 'Advanced Back Development', 'Ultimate Control'],
-      animation: 'oneArmFrontLever'
+      name: 'HANGING ONE ARM L-SIT',
+      description: 'Elite core and hip flexor strength - single arm hanging L-sit hold',
+      features: ['Elite Core Strength', 'Hip Flexor Power', 'Unilateral Stability', 'Advanced Control'],
+      animation: 'hangingOneArmLSit'
     },
     {
       name: 'FRONT LEVER',
@@ -93,11 +93,11 @@ const CalisthenicsSection = () => {
                     />
                   </div>
                 )}
-                {phases[activePhase].animation === 'oneArmFrontLever' && (
+                {phases[activePhase].animation === 'hangingOneArmLSit' && (
                   <div className="figure-image-container">
                     <img 
                       src="/one-arm-front-lever.jpg" 
-                      alt="One-Arm Front Lever exercise" 
+                      alt="Hanging One Arm L-Sit exercise" 
                       className="figure-image"
                     />
                   </div>
